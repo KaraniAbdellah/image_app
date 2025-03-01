@@ -1,6 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
   --clr-primary-1: #f2f2f2;
-  --clr-primary-2: #121212;
+  --clr-primary-2: hsl(345deg 100% 47%);
   --clr-primary-3: #fff;
   --clr-primary-4: #757575;
   --transition: all 0.3s linear;
@@ -24,10 +27,19 @@ body {
   line-height: 1.5;
 }
 
-#root {
-  display: grid;
-  grid-template-columns: [gap-start] 1fr [content-start] max(65vw, 50rem) [content-end] 1fr [gap-end];
-  grid-template-rows: [top-gap] 6rem [start] auto [end];
+.app {
+  min-height: 100vh;
+  width: 100%;
+}
+.sub-container {
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  padding: 100px 100px 20px;
+}
+@media (max-width: 992px) {
+  .sub-container {
+    padding: 100px 20px 20px;
+  }
 }
 
 h3 {
@@ -42,18 +54,7 @@ p {
   color: var(--clr-primary-4);
 }
 
-@media screen and (min-width: 600px) {
-  h3 {
-    font-size: 1.75rem;
-    line-height: 1;
-  }
-}
 
-.container {
-  grid-column: content-start/content-end;
-  grid-row: start/end;
-  padding: 0 1rem;
-}
 
 form {
   display: flex;
@@ -87,6 +88,13 @@ input:focus {
   border-color: transparent;
   cursor: pointer;
   font-size: 1.2rem;
+}
+.btn:hover {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
 }
 
 .image-container {
@@ -166,3 +174,6 @@ img {
     transform: translateY(0);
   }
 }
+
+
+

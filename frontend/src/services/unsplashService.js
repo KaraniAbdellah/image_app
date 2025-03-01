@@ -1,6 +1,6 @@
 import { createApi } from "unsplash-js";
 
-const apiKey = process.env.REACT_APP_UNSPLASH_API_KEY;
+const apiKey = '4f4c23e89c9a64479268adfd3d9b1c71479ecacac85c5684cfeb296652acfd5c';
 const unsplash = createApi({ accessKey: apiKey });
 
 export const searchPhotos = async (query, page, perPage = 12) => {
