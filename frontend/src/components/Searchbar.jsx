@@ -2,6 +2,7 @@ import React from "react";
 import { FaSearch } from "react-icons/fa";
 
 const SearchBar = ({ searchText, onSearchChange, onSubmit }) => {
+
   return (
     <div className="search-container">
       <form className="" onSubmit={onSubmit}>
@@ -15,7 +16,6 @@ const SearchBar = ({ searchText, onSearchChange, onSubmit }) => {
           />
           <label class="brutalist-label">YOUR FAVORITE IMAGE</label>
         </div>
-
         <button class="button-82-pushable ml-6" role="button">
           <span class="button-82-shadow"></span>
           <span class="button-82-edge"></span>
