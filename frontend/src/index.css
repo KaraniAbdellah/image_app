@@ -177,3 +177,10 @@ img {
 
 
 
+
+
+/* Input Classes */
+.InvalidInput {
+  border: 2px solid red !important;
+}
+

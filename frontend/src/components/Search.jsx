@@ -3,8 +3,9 @@ import { searchPhotos } from "../services/unsplashService";
 import SearchBar from "./Searchbar";
 import ImageGrid from "./ImageGrid";
 import LoadMoreButton from "./LoadMoreButton";
+import axios from "axios";
 
-const Search = () => {
+const Search = ({ logSatate, setLogState }) => {
   const [currentSearchTerm, setCurrentSearchTerm] = useState("");
   const [searchText, setSearchText] = useState("");
   const [counter, setCounter] = useState(0);
@@ -13,6 +14,39 @@ const Search = () => {
 
   const handleSearch = async (e) => {
     e.preventDefault();
+    // Verify the expiration of the token
+    let checkToken = false;
+    const token = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("user_token="))
+      ?.split("=")[1];
+
+    if (!token) {
+      console.error("No token found in cookies");
+      alert("Login First");
+      return;
+    }
+
+    try {
+      const res = await axios.post("http://127.0.0.1:3001/VerifyToken", {
+        token,
+      });
+
+      console.log(res.data);
+      if (res.data.login) {
+        checkToken = true;
+      }
+    } catch (err) {
+      console.error("Request failed", err);
+    }
+
+    // Get the data [Images]
+    console.log(checkToken);
+    if (!checkToken) {
+      alert("Login First");
+      return;
+    }
+
     try {
       const data = await searchPhotos(searchText, 1);
       setImages(data.results);
