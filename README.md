@@ -6,12 +6,15 @@
 
 <h2>Search View</h2>
 
-![](screenshots/search1.png)
-![](screenshots/search2.png)
+![](screenshots/search.png)
 
-<h2>Load More View</h2>
+<h2>Login</h2>
 
-![](screenshots/loadmore.png)
+![](screenshots/login.png)
+
+<h2>Login</h2>
+
+![](screenshots/signup.png)
 
 ### Built with
 
@@ -20,12 +23,19 @@
 - Flex Box
 - React Hooks
 - Unsplash API
+- Express Js
+- MongoDb and mongoose
+- JWT
+- Passport
 
 ### Features
 
 - Single Page Application
 - Load More button will add more images when clicked
+- Login and Signup
 
 ## Author
+<p>This Project Cloned From <a href="https://github.com/choubari/image-app"></a>Kawtar Choubari</p>
 
-- Github - [@shmiitg](https://github.com/shmiitg)
+
+
