@@ -36,7 +36,7 @@
 - Login and Signup
 
 ## Author
-<p>This Project Cloned From <a href="https://github.com/choubari/image-app"></a>Kawtar Choubari</p>
+<p>This Project Cloned From <a href="https://github.com/choubari/image-app">Kawtar Choubari</a></p>
 
 
 
