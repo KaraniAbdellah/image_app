@@ -2,19 +2,20 @@
 
 <h2>Initial View</h2>
 
-![](screenshots/initial.png)
+![](imgs/initial.png)
+
 
 <h2>Search View</h2>
 
-![](screenshots/search.png)
+![](imgs/search.png)
 
 <h2>Login</h2>
 
-![](screenshots/login.png)
+![](imgs/login.png)
 
 <h2>Login</h2>
 
-![](screenshots/signup.png)
+![](imgs/signup.png)
 
 ### Built with
 
